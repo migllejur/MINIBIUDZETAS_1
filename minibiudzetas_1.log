@@ -1,0 +1,21 @@
+2024-11-29 14:01:47,379 || 13 || INFO || Pradėta programa, atspausdinamas pirmas meniu
+2024-11-29 14:01:57,985 || 26 || INFO || Pasirinktas skaičius: 2
+2024-11-29 14:01:57,985 || 40 || INFO || Įvedami išlaidų duomenys
+2024-11-29 14:02:05,168 || 42 || INFO || Įvesta data: 2024 09 09
+2024-11-29 14:02:08,645 || 45 || INFO || Įvestas pavadinimas: Maistas
+2024-11-29 14:02:10,919 || 47 || INFO || Įvesta suma: 100.0
+2024-11-29 14:02:10,919 || 50 || INFO || Nauja informacija sudėta į listą ir prijungta prie bendro išlaidų listo
+2024-11-29 14:02:13,004 || 26 || INFO || Pasirinktas skaičius: 2
+2024-11-29 14:02:13,006 || 40 || INFO || Įvedami išlaidų duomenys
+2024-11-29 14:02:23,465 || 42 || INFO || Įvesta data: 2024 10 10
+2024-11-29 14:02:34,049 || 45 || INFO || Įvestas pavadinimas: Kinas
+2024-11-29 14:02:35,985 || 47 || INFO || Įvesta suma: 20.0
+2024-11-29 14:02:35,985 || 50 || INFO || Nauja informacija sudėta į listą ir prijungta prie bendro išlaidų listo
+2024-11-29 14:02:47,226 || 26 || INFO || Pasirinktas skaičius: 5
+2024-11-29 14:02:47,226 || 60 || INFO || Atspaudintas statistikos meniu
+2024-11-29 14:02:49,480 || 66 || INFO || Pasirinktas skaičius: 1
+2024-11-29 14:02:49,480 || 69 || ERROR || Bandyta pasiekti pajamų statistiką - nėra įvestų pajamų.
+2024-11-29 14:02:53,553 || 66 || INFO || Pasirinktas skaičius: x
+2024-11-29 14:02:53,553 || 135 || INFO || Sugrįžta į pagrindinį meniu
+2024-11-29 14:02:56,329 || 26 || INFO || Pasirinktas skaičius: q
+2024-11-29 14:02:56,329 || 154 || INFO || Programa baigta
