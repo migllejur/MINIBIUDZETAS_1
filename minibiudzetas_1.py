@@ -1,3 +1,5 @@
+import datetime
+
 pajamos = []
 islaidos = []
 
@@ -8,3 +10,18 @@ while True:
           "4. Atspausdinti išlaidų eilutes\n"
           "5. Atspausdinti statistiką\n"
           "q - išeiti")
+    ivestis = input("> ")
+    if ivestis == "1":
+        data = input("Data: ")
+        datos_formatas = datetime.datetime.strptime(data, "%Y %m %d")
+        pajamu_pav = input("Pajamų pavadinimas: ")
+        suma = float(input("Pajamų suma: "))
+        pajamu_listas = [datos_formatas, pajamu_pav, suma]
+        pajamos.append(pajamu_listas)
+    if ivestis == "2":
+        data = input("Data: ")
+        datos_formatas = datetime.datetime.strptime(data, "%Y %m %d")
+        islaidu_pav = input("Išlaidų pavadinimas: ")
+        suma = float(input("Išlaidų suma: "))
+        islaidu_listas = [datos_formatas, islaidu_pav, suma]
+        islaidos.append(islaidu_listas)
