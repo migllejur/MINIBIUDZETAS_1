@@ -1,4 +1,5 @@
 import datetime
+import mano_funkcijos
 
 pajamos = []
 islaidos = []
@@ -36,18 +37,75 @@ while True:
             print("1. Pajamų statistika\n"
                   "2. Išlaidų statistika\n"
                   "x - sugrįžti į pagrindinį meniu")
+            ivestis = input("> ")
             if ivestis == "1":
                 while True:
                     print("1. Bendra pajamų suma\n"
                           "2. Didžiausia pajamų suma\n"
                           "3. Mažiausia pajamų suma\n"
-                          "4. Pajamų vidurkis")
+                          "4. Pajamų vidurkis\n"
+                          "z - sugrįžti į statistikos meniu")
+                    ivestis = input("> ")
+                    if ivestis == "1":
+                        sumos = []
+                        for data, pav, suma in pajamos:
+                            sumos.append(suma)
+                        res = mano_funkcijos.statistika(*sumos)
+                        print(res)
+                    if ivestis == "2":
+                        sumos = []
+                        for data, pav, suma in pajamos:
+                            sumos.append(suma)
+                        res = mano_funkcijos.statistika(*sumos, operacija="max")
+                        print(res)
+                    if ivestis == "3":
+                        sumos = []
+                        for data, pav, suma in pajamos:
+                            sumos.append(suma)
+                        res = mano_funkcijos.statistika(*sumos, operacija="min")
+                        print(res)
+                    if ivestis == "4":
+                        sumos = []
+                        for data, pav, suma in pajamos:
+                            sumos.append(suma)
+                        res = mano_funkcijos.statistika(*sumos, operacija="average")
+                        print(res)
+                    if ivestis == "z":
+                        break
             if ivestis == "2":
                 while True:
                     print("1. Bendra išlaidų suma\n"
                           "2. Didžiausia išlaidų suma\n"
                           "3. Mažiausia išlaidų suma\n"
-                          "4. Išlaidų vidurkis")
+                          "4. Išlaidų vidurkis\n"
+                          "z - sugrįžti į statistikos meniu")
+                    ivestis = input("> ")
+                    if ivestis == "1":
+                        sumos = []
+                        for data, pav, suma in islaidos:
+                            sumos.append(suma)
+                        res = mano_funkcijos.statistika(*sumos)
+                        print(res)
+                    if ivestis == "2":
+                        sumos = []
+                        for data, pav, suma in islaidos:
+                            sumos.append(suma)
+                        res = mano_funkcijos.statistika(*sumos, operacija="max")
+                        print(res)
+                    if ivestis == "3":
+                        sumos = []
+                        for data, pav, suma in islaidos:
+                            sumos.append(suma)
+                        res = mano_funkcijos.statistika(*sumos, operacija="min")
+                        print(res)
+                    if ivestis == "4":
+                        sumos = []
+                        for data, pav, suma in islaidos:
+                            sumos.append(suma)
+                        res = mano_funkcijos.statistika(*sumos, operacija="average")
+                        print(res)
+                    if ivestis == "z":
+                        break
             if ivestis == "x":
                 break
     if ivestis == "q":
