@@ -16,16 +16,18 @@ def istrinti_ieskoti(*args, operacija="istrinti"):
             print(f"{nr}. {elem}")
         try:
             sk = int(input("Įveskite skaičių duomenų, kuriuos norite ištrinti: "))
-            if sk <= len(args):
+            if 1 <= sk <= len(args):
                 del args[sk - 1]
                 print("Duomenys ištrinti")
         except ValueError:
             print("Klaida. Įvestas netinkamas skaičius. Bandykite dar kartą.")
     if operacija == "ieskoti":
         search = input("Įveskite raktažodį (sumą, pavadinimą arba datą): ")
+        found = False
         for elem in args:
             if search in elem:
                 print(elem)
-        else:
+                found = True
+        if not found:
             print("Duomenys nerasti")
     return args
