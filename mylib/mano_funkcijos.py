@@ -11,6 +11,7 @@ def statistika(*args, operacija="suma"):
 
 
 def istrinti_ieskoti(*args, operacija="istrinti"):
+    args = list(args)
     if operacija == "istrinti":
         for nr, elem in enumerate(args, start=1):
             print(f"{nr}. {elem}")
@@ -19,8 +20,10 @@ def istrinti_ieskoti(*args, operacija="istrinti"):
             if 1 <= sk <= len(args):
                 del args[sk - 1]
                 print("Duomenys ištrinti")
+            else:
+                print("Klaida. Duomenys neištrinti. Bandykite dar kartą.")
         except ValueError:
-            print("Klaida. Įvestas netinkamas skaičius. Bandykite dar kartą.")
+            print("Klaida. Įvestas netinkamas kriterijus. Bandykite dar kartą.")
     if operacija == "ieskoti":
         search = input("Įveskite raktažodį (sumą, pavadinimą arba datą): ")
         found = False
