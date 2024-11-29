@@ -1,5 +1,5 @@
 import datetime
-from mylib.mano_funkcijos import statistika, istrinti_ieskoti
+from mylib.mano_funkcijos import gauk_statistika, istrinti_ieskoti
 import logging
 import pickle
 
@@ -7,9 +7,6 @@ logging.basicConfig(filename="minibiudzetas_1.log",
                     level=logging.INFO,
                     encoding="utf-8",
                     format="%(asctime)s || %(lineno)d || %(levelname)s || %(message)s")
-
-pajamos = []
-islaidos = []
 
 logging.info("Bandymas atidaryti pickle failą")
 try:
@@ -37,29 +34,23 @@ while True:
     ivestis = input("> ")
     logging.info(f"Pasirinktas skaičius: {ivestis}")
     if ivestis == "1":
-        logging.info("Įvedami pajamų duomenys")
         data = input("Data (YYYY MM DD): ")
-        logging.info(f"Įvesta data: {data}")
         datos_formatas = datetime.datetime.strptime(data, "%Y %m %d")
         pajamu_pav = input("Pajamų pavadinimas: ")
-        logging.info(f"Įvestas pavadinimas: {pajamu_pav}")
         suma = float(input("Pajamų suma: "))
-        logging.info(f"Įvesta suma: {suma}")
         pajamu_listas = [datos_formatas.strftime("%Y %m %d"), pajamu_pav, suma]
         pajamos.append(pajamu_listas)
-        logging.info("Nauja informacija sudėta į listą ir prijungta prie bendro pajamų listo")
+        logging.info(
+            f"Informacija {data}, {pajamu_pav} ir {suma} sujungta į vieną listą ir pridėta į bendrą pajamų listą.")
     if ivestis == "2":
-        logging.info("Įvedami išlaidų duomenys")
         data = input("Data: ")
-        logging.info(f"Įvesta data: {data}")
         datos_formatas = datetime.datetime.strptime(data, "%Y %m %d")
         islaidu_pav = input("Išlaidų pavadinimas: ")
-        logging.info(f"Įvestas pavadinimas: {islaidu_pav}")
         suma = float(input("Išlaidų suma: "))
-        logging.info(f"Įvesta suma: {suma}")
         islaidu_listas = [datos_formatas.strftime("%Y %m %d"), islaidu_pav, suma]
         islaidos.append(islaidu_listas)
-        logging.info("Nauja informacija sudėta į listą ir prijungta prie bendro išlaidų listo")
+        logging.info(
+            f"Informacija {data}, {islaidu_pav} ir {suma} sujungta į vieną listą ir pridėta į bendrą išlaidų listą.")
     if ivestis == "3":
         for elem in pajamos:
             print(elem)
@@ -81,6 +72,7 @@ while True:
                     logging.error("Bandyta pasiekti pajamų statistiką - nėra įvestų pajamų.")
                     print("Nėra įvestų pajamų.")
                     continue
+                logging.info("Atspaudintas pajamų statistikos meniu")
                 while True:
                     print("1. Bendra pajamų suma\n"
                           "2. Didžiausia pajamų suma\n"
@@ -91,19 +83,19 @@ while True:
                     logging.info(f"Pasirinktas skaičius: {ivestis}")
                     sumos = [suma for data, pav, suma in pajamos]
                     if ivestis == "1":
-                        res = statistika(*sumos)
+                        res = gauk_statistika(*sumos)
                         print(res)
                         logging.info(f"Bendra pajamų suma: {res}")
                     if ivestis == "2":
-                        res = statistika(*sumos, operacija="max")
+                        res = gauk_statistika(*sumos, operacija="max")
                         print(res)
                         logging.info(f"Didžiausios pajamos: {res}")
                     if ivestis == "3":
-                        res = statistika(*sumos, operacija="min")
+                        res = gauk_statistika(*sumos, operacija="min")
                         print(res)
                         logging.info(f"Mažiausios pajamos: {res}")
                     if ivestis == "4":
-                        res = statistika(*sumos, operacija="average")
+                        res = gauk_statistika(*sumos, operacija="average")
                         print(res)
                         logging.info(f"Pajamų vidurkis: {res}")
                     if ivestis == "z":
@@ -115,6 +107,7 @@ while True:
                     logging.error("Bandyta pasiekti išlaidų statistiką - nėra įvestų išlaidų.")
                     print("Nėra įvestų išlaidų.")
                     continue
+                logging.info("Atspaudintas išlaidų statistikos meniu")
                 while True:
                     print("1. Bendra išlaidų suma\n"
                           "2. Didžiausia išlaidų suma\n"
@@ -125,20 +118,20 @@ while True:
                     logging.info(f"Pasirinktas skaičius: {ivestis}")
                     sumos = [suma for data, pav, suma in islaidos]
                     if ivestis == "1":
-                        res = statistika(*sumos)
-                        logging.info(f"Bendra pajamų suma: {res}")
+                        res = gauk_statistika(*sumos)
+                        logging.info(f"Bendra išlaidų suma: {res}")
                         print(res)
                     if ivestis == "2":
-                        res = statistika(*sumos, operacija="max")
-                        logging.info(f"Didžiausios pajamos: {res}")
+                        res = gauk_statistika(*sumos, operacija="max")
+                        logging.info(f"Didžiausios išlaidos: {res}")
                         print(res)
                     if ivestis == "3":
-                        res = statistika(*sumos, operacija="min")
-                        logging.info(f"Mažiausios pajamos: {res}")
+                        res = gauk_statistika(*sumos, operacija="min")
+                        logging.info(f"Mažiausios išlaidos: {res}")
                         print(res)
                     if ivestis == "4":
-                        res = statistika(*sumos, operacija="average")
-                        logging.info(f"Pajamų vidurkis: {res}")
+                        res = gauk_statistika(*sumos, operacija="average")
+                        logging.info(f"Išlaidų vidurkis: {res}")
                         print(res)
                     if ivestis == "z":
                         logging.info("Sugrįžta į statistikos meniu")

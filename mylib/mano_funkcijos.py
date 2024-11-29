@@ -1,4 +1,4 @@
-def statistika(*args, operacija="suma"):
+def gauk_statistika(*args, operacija="suma"):
     if operacija == "suma":
         rezultatas = sum(args)
     elif operacija == "min":
