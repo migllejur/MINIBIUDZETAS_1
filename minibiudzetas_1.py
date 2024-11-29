@@ -83,19 +83,19 @@ while True:
                     logging.info(f"Pasirinktas skaičius: {ivestis}")
                     sumos = [suma for data, pav, suma in pajamos]
                     if ivestis == "1":
-                        res = gauk_statistika(*sumos)
+                        res = gauk_statistika(sumos)
                         print(res)
                         logging.info(f"Bendra pajamų suma: {res}")
                     if ivestis == "2":
-                        res = gauk_statistika(*sumos, operacija="max")
+                        res = gauk_statistika(sumos, operacija="max")
                         print(res)
                         logging.info(f"Didžiausios pajamos: {res}")
                     if ivestis == "3":
-                        res = gauk_statistika(*sumos, operacija="min")
+                        res = gauk_statistika(sumos, operacija="min")
                         print(res)
                         logging.info(f"Mažiausios pajamos: {res}")
                     if ivestis == "4":
-                        res = gauk_statistika(*sumos, operacija="average")
+                        res = gauk_statistika(sumos, operacija="average")
                         print(res)
                         logging.info(f"Pajamų vidurkis: {res}")
                     if ivestis == "z":
@@ -118,19 +118,19 @@ while True:
                     logging.info(f"Pasirinktas skaičius: {ivestis}")
                     sumos = [suma for data, pav, suma in islaidos]
                     if ivestis == "1":
-                        res = gauk_statistika(*sumos)
+                        res = gauk_statistika(sumos)
                         logging.info(f"Bendra išlaidų suma: {res}")
                         print(res)
                     if ivestis == "2":
-                        res = gauk_statistika(*sumos, operacija="max")
+                        res = gauk_statistika(sumos, operacija="max")
                         logging.info(f"Didžiausios išlaidos: {res}")
                         print(res)
                     if ivestis == "3":
-                        res = gauk_statistika(*sumos, operacija="min")
+                        res = gauk_statistika(sumos, operacija="min")
                         logging.info(f"Mažiausios išlaidos: {res}")
                         print(res)
                     if ivestis == "4":
-                        res = gauk_statistika(*sumos, operacija="average")
+                        res = gauk_statistika(sumos, operacija="average")
                         logging.info(f"Išlaidų vidurkis: {res}")
                         print(res)
                     if ivestis == "z":
@@ -140,19 +140,19 @@ while True:
                 logging.info("Sugrįžta į pagrindinį meniu")
                 break
     if ivestis == "6":
-        res = istrinti_ieskoti(*pajamos)
+        res = istrinti_ieskoti(pajamos)
         logging.warning(f"Ištrinti duomenys: {res}")
         print(res)
     if ivestis == "7":
-        res = istrinti_ieskoti(*islaidos)
+        res = istrinti_ieskoti(islaidos)
         logging.warning(f"Ištrinti duomenys: {res}")
         print(res)
     if ivestis == "8":
-        res = istrinti_ieskoti(*pajamos, operacija="ieskoti")
+        res = istrinti_ieskoti(pajamos, operacija="ieskoti")
         logging.info(f"Surasti duomenys: {res}")
         print(res)
     if ivestis == "9":
-        res = istrinti_ieskoti(*islaidos, operacija="ieskoti")
+        res = istrinti_ieskoti(islaidos, operacija="ieskoti")
         logging.info(f"Surasti duomenys: {res}")
         print(res)
     if ivestis == "q":
