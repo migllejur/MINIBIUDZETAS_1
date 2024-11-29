@@ -19,3 +19,46 @@
 2024-11-29 14:02:53,553 || 135 || INFO || Sugrįžta į pagrindinį meniu
 2024-11-29 14:02:56,329 || 26 || INFO || Pasirinktas skaičius: q
 2024-11-29 14:02:56,329 || 154 || INFO || Programa baigta
+2024-11-29 14:14:12,762 || 14 || INFO || Bandymas atidaryti pickle failą
+2024-11-29 14:14:12,762 || 20 || ERROR || Nepavyko atidaryti failo
+2024-11-29 14:14:12,762 || 25 || INFO || Pradėta programa, atspausdinamas pirmas meniu
+2024-11-29 14:14:19,406 || 38 || INFO || Pasirinktas skaičius: 1
+2024-11-29 14:14:19,406 || 40 || INFO || Įvedami pajamų duomenys
+2024-11-29 14:14:23,698 || 42 || INFO || Įvesta data: 2024 09 09
+2024-11-29 14:14:27,350 || 45 || INFO || Įvestas pavadinimas: Atlyginimas
+2024-11-29 14:14:29,553 || 47 || INFO || Įvesta suma: 1500.0
+2024-11-29 14:14:29,553 || 50 || INFO || Nauja informacija sudėta į listą ir prijungta prie bendro pajamų listo
+2024-11-29 14:14:31,610 || 38 || INFO || Pasirinktas skaičius: 1
+2024-11-29 14:14:31,610 || 40 || INFO || Įvedami pajamų duomenys
+2024-11-29 14:14:34,653 || 42 || INFO || Įvesta data: 2024 10 10
+2024-11-29 14:14:37,218 || 45 || INFO || Įvestas pavadinimas: Bonusas
+2024-11-29 14:14:39,161 || 47 || INFO || Įvesta suma: 500.0
+2024-11-29 14:14:39,161 || 50 || INFO || Nauja informacija sudėta į listą ir prijungta prie bendro pajamų listo
+2024-11-29 14:14:43,225 || 38 || INFO || Pasirinktas skaičius: 1
+2024-11-29 14:14:43,225 || 40 || INFO || Įvedami pajamų duomenys
+2024-11-29 14:14:46,773 || 42 || INFO || Įvesta data: 2024 11 11
+2024-11-29 14:14:50,094 || 45 || INFO || Įvestas pavadinimas: Dovana 
+2024-11-29 14:14:52,105 || 47 || INFO || Įvesta suma: 200.0
+2024-11-29 14:14:52,105 || 50 || INFO || Nauja informacija sudėta į listą ir prijungta prie bendro pajamų listo
+2024-11-29 14:14:53,241 || 38 || INFO || Pasirinktas skaičius: 2
+2024-11-29 14:14:53,241 || 52 || INFO || Įvedami išlaidų duomenys
+2024-11-29 14:14:57,721 || 54 || INFO || Įvesta data: 2024 09 09
+2024-11-29 14:15:00,246 || 57 || INFO || Įvestas pavadinimas: Maistas
+2024-11-29 14:15:02,201 || 59 || INFO || Įvesta suma: 100.0
+2024-11-29 14:15:02,201 || 62 || INFO || Nauja informacija sudėta į listą ir prijungta prie bendro išlaidų listo
+2024-11-29 14:15:05,109 || 38 || INFO || Pasirinktas skaičius: 2024 10 10
+2024-11-29 14:15:16,114 || 38 || INFO || Pasirinktas skaičius: 2
+2024-11-29 14:15:16,114 || 52 || INFO || Įvedami išlaidų duomenys
+2024-11-29 14:15:21,276 || 54 || INFO || Įvesta data: 2024 10 10
+2024-11-29 14:15:24,850 || 57 || INFO || Įvestas pavadinimas: Kinas
+2024-11-29 14:15:26,550 || 59 || INFO || Įvesta suma: 20.0
+2024-11-29 14:15:26,550 || 62 || INFO || Nauja informacija sudėta į listą ir prijungta prie bendro išlaidų listo
+2024-11-29 14:15:28,154 || 38 || INFO || Pasirinktas skaičius: 2
+2024-11-29 14:15:28,154 || 52 || INFO || Įvedami išlaidų duomenys
+2024-11-29 14:15:31,409 || 54 || INFO || Įvesta data: 2024 11 11
+2024-11-29 14:15:36,602 || 57 || INFO || Įvestas pavadinimas: Dovanos
+2024-11-29 14:15:39,090 || 59 || INFO || Įvesta suma: 500.0
+2024-11-29 14:15:39,090 || 62 || INFO || Nauja informacija sudėta į listą ir prijungta prie bendro išlaidų listo
+2024-11-29 14:15:50,077 || 38 || INFO || Pasirinktas skaičius: q
+2024-11-29 14:15:50,077 || 166 || INFO || Programa baigta
+2024-11-29 14:15:50,079 || 172 || INFO || Duomenys įrašyti į pickle failą

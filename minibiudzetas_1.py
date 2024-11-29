@@ -1,6 +1,7 @@
 import datetime
 from mylib.mano_funkcijos import statistika, istrinti_ieskoti
 import logging
+import pickle
 
 logging.basicConfig(filename="minibiudzetas_1.log",
                     level=logging.INFO,
@@ -9,6 +10,17 @@ logging.basicConfig(filename="minibiudzetas_1.log",
 
 pajamos = []
 islaidos = []
+
+logging.info("Bandymas atidaryti pickle failą")
+try:
+    with open("biudzetas.pickle", mode="rb") as file:
+        bendras = pickle.load(file)
+        pajamos, islaidos = bendras
+except FileNotFoundError:
+    logging.error("Nepavyko atidaryti failo")
+    pajamos = []
+    islaidos = []
+    bendras = [pajamos, islaidos]
 
 logging.info("Pradėta programa, atspausdinamas pirmas meniu")
 while True:
@@ -153,3 +165,8 @@ while True:
     if ivestis == "q":
         logging.info("Programa baigta")
         break
+
+with open("biudzetas.pickle", mode="wb") as file:
+    # noinspection PyTypeChecker
+    pickle.dump([pajamos, islaidos], file)
+    logging.info("Duomenys įrašyti į pickle failą")
