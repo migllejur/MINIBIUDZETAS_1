@@ -1,5 +1,5 @@
 import datetime
-import mano_funkcijos
+from mylib.mano_funkcijos import statistika, istrinti_ieskoti
 
 pajamos = []
 islaidos = []
@@ -10,6 +10,10 @@ while True:
           "3. Atspausdinti pajamų eilutes\n"
           "4. Atspausdinti išlaidų eilutes\n"
           "5. Atspausdinti statistiką\n"
+          "6. Ištrinti duomenis iš pajamų\n"
+          "7. Ištrinti duomenis iš išlaidų\n"
+          "8. Ieškoti duomenų tarp pajamų\n"
+          "9. Ieškoti duomenų tarp išlaidų\n"
           "q - išeiti")
     ivestis = input("> ")
     if ivestis == "1":
@@ -51,16 +55,16 @@ while True:
                     ivestis = input("> ")
                     sumos = [suma for data, pav, suma in pajamos]
                     if ivestis == "1":
-                        res = mano_funkcijos.statistika(*sumos)
+                        res = statistika(*sumos)
                         print(res)
                     if ivestis == "2":
-                        res = mano_funkcijos.statistika(*sumos, operacija="max")
+                        res = statistika(*sumos, operacija="max")
                         print(res)
                     if ivestis == "3":
-                        res = mano_funkcijos.statistika(*sumos, operacija="min")
+                        res = statistika(*sumos, operacija="min")
                         print(res)
                     if ivestis == "4":
-                        res = mano_funkcijos.statistika(*sumos, operacija="average")
+                        res = statistika(*sumos, operacija="average")
                         print(res)
                     if ivestis == "z":
                         break
@@ -77,20 +81,32 @@ while True:
                     ivestis = input("> ")
                     sumos = [suma for data, pav, suma in islaidos]
                     if ivestis == "1":
-                        res = mano_funkcijos.statistika(*sumos)
+                        res = statistika(*sumos)
                         print(res)
                     if ivestis == "2":
-                        res = mano_funkcijos.statistika(*sumos, operacija="max")
+                        res = statistika(*sumos, operacija="max")
                         print(res)
                     if ivestis == "3":
-                        res = mano_funkcijos.statistika(*sumos, operacija="min")
+                        res = statistika(*sumos, operacija="min")
                         print(res)
                     if ivestis == "4":
-                        res = mano_funkcijos.statistika(*sumos, operacija="average")
+                        res = statistika(*sumos, operacija="average")
                         print(res)
                     if ivestis == "z":
                         break
             if ivestis == "x":
                 break
+    if ivestis == "6":
+        res = istrinti_ieskoti(*pajamos)
+        print(res)
+    if ivestis == "7":
+        res = istrinti_ieskoti(*islaidos)
+        print(res)
+    if ivestis == "8":
+        res = istrinti_ieskoti(*pajamos, operacija="ieskoti")
+        print(res)
+    if ivestis == "9":
+        res = istrinti_ieskoti(*islaidos, operacija="ieskoti")
+        print(res)
     if ivestis == "q":
         break
